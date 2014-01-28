@@ -1,7 +1,7 @@
-require 'omniauth/core'
 require 'digest/md5'
-require 'rest-client'
 require 'multi_json'
+require 'omniauth'
+require 'rest_client'
 
 module OmniAuth
   module Strategies
@@ -23,21 +23,16 @@ module OmniAuth
     #
     class Draugiem
       include OmniAuth::Strategy
-      attr_accessor :app_id, :api_key
 
-      def initialize(app, app_id, api_key)
-        super(app, :draugiem)
-        @app_id   = app_id
-        @api_key  = api_key
-      end
+      args [:app_id, :api_key]
 
       protected
 
       def request_phase
         params = {
-          :app => @app_id,
+          :app => options.app_id,
           :redirect => callback_url,
-          :hash => Digest::MD5.hexdigest("#{@api_key}#{callback_url}")
+          :hash => Digest::MD5.hexdigest("#{options.api_key}#{callback_url}")
         }
         query_string = params.collect{ |key,value| "#{key}=#{Rack::Utils.escape(value)}" }.join('&')
         redirect "http://api.draugiem.lv/authorize/?#{query_string}"
@@ -60,20 +55,13 @@ module OmniAuth
         fail!(:invalid_response, e)
       end
 
-      def auth_hash
-        OmniAuth::Utils.deep_merge(super, {
-          'uid' => @auth_data['uid'],
-          'user_info' => get_user_info,
-          'credentials' => {
-            'apikey' => @auth_data['apikey']
-          },
-          'extra' => { 'user_hash' => @auth_data }
-        })
+      uid { @auth_data['uid'] }
+
+      credentials do
+        { 'apikey' => @auth_data['apikey'] }
       end
 
-      private
-
-      def get_user_info
+      info do
         if @auth_data['users'] && @auth_data['users'][@auth_data['uid']]
           user = @auth_data['users'][@auth_data['uid']]
           {
@@ -92,10 +80,16 @@ module OmniAuth
         end
       end
 
+      extra do
+        { 'user_hash' => @auth_data }
+      end
+
+      private
+
       def draugiem_authorize_params code
         {
           :action => 'authorize',
-          :app => @api_key,
+          :app => options.api_key,
           :code => code
         }
       end
