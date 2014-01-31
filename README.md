@@ -1,6 +1,6 @@
 # Omniauth::Draugiem
 
-TODO: Write a gem description
+OmniAuth strategy for authenticating to draugiem.lv
 
 ## Installation
 
@@ -18,12 +18,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add this to config/initializers/omniauth.rb
+
+    Rails.application.config.middleware.use OmniAuth::Builder do
+      provider :draugiem, 'app_id', 'api_key'
+    end
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/omniauth-draugiem/fork )
+1. Fork it ( http://github.com/mak-it/omniauth-draugiem/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+Used code from Michael Bleigh and Erik Michaels-Ober gem 'oa-more'.

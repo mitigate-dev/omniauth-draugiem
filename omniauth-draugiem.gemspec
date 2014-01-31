@@ -6,16 +6,16 @@ require 'omniauth-draugiem/version'
 Gem::Specification.new do |s|
   s.name          = "omniauth-draugiem"
   s.version       = Omniauth::Draugiem::VERSION
-  s.authors       = ["Edgars Beigarts"]
-  s.email         = ["edgars.beigarts@makit.lv"]
+  s.authors       = ["Edgars Beigarts", "Uldis Ziņģis"]
+  s.email         = ["edgars.beigarts@makit.lv", "uldis.zingis@makit.lv"]
   s.summary       = "Draugiem.lv authentication strategy for OmniAuth"
   s.description   = s.summary
-  s.homepage      = ""
+  s.homepage      = "http://github.com/mak-it/omniauth-draugiem"
   s.license       = "MIT"
 
   s.files         = `git ls-files`.split($/)
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+  s.test_files    = s.files.grep(%r{^spec/})
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency "omniauth"
