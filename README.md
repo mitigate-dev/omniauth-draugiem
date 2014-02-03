@@ -31,7 +31,3 @@ Add this to config/initializers/omniauth.rb
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
-## License
-
-Used code from Michael Bleigh and Erik Michaels-Ober gem 'oa-more'.
