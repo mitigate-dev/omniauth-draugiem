@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^spec/})
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency "omniauth"
-  s.add_runtime_dependency "rest-client"
+  s.add_runtime_dependency "omniauth", "~> 1.0"
+  s.add_runtime_dependency "rest-client", "~> 1.6"
 
   s.add_development_dependency "bundler", "~> 1.5"
   s.add_development_dependency "rake"
