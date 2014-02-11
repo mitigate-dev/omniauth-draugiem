@@ -1,5 +1,7 @@
 # Omniauth::Draugiem
 
+[![Continuous Integration status](https://secure.travis-ci.org/mak-it/omniauth-draugiem.png)](http://travis-ci.org/mak-it/omniauth-draugiem)
+
 OmniAuth strategy for authenticating to draugiem.lv
 
 ## Installation
