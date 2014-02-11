@@ -1,0 +1,23 @@
+# Logfile created on 2014-02-03 14:03:39 +0200 by logger.rb/36483
+I, [2014-02-03T14:03:39.043643 #8388]  INFO -- : 0:  rake (10.1.1) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/rake-10.1.1.gemspec
+I, [2014-02-03T14:03:39.045037 #8388]  INFO -- : 0:  addressable (2.3.5) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/addressable-2.3.5.gemspec
+I, [2014-02-03T14:03:39.046078 #8388]  INFO -- : 0:  bundler (1.5.1) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/bundler-1.5.1.gemspec
+I, [2014-02-03T14:03:39.047506 #8388]  INFO -- : 0:  safe_yaml (0.9.7) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/safe_yaml-0.9.7.gemspec
+I, [2014-02-03T14:03:39.048597 #8388]  INFO -- : 0:  crack (0.4.1) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/crack-0.4.1.gemspec
+I, [2014-02-03T14:03:39.052024 #8388]  INFO -- : 0:  diff-lcs (1.2.5) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/diff-lcs-1.2.5.gemspec
+I, [2014-02-03T14:03:39.053118 #8388]  INFO -- : 0:  docile (1.1.1) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/docile-1.1.1.gemspec
+I, [2014-02-03T14:03:39.054310 #8388]  INFO -- : 0:  hashie (2.0.5) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/hashie-2.0.5.gemspec
+I, [2014-02-03T14:03:39.055479 #8388]  INFO -- : 0:  mime-types (2.0) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/mime-types-2.0.gemspec
+I, [2014-02-03T14:03:39.056523 #8388]  INFO -- : 0:  multi_json (1.8.2) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/multi_json-1.8.2.gemspec
+I, [2014-02-03T14:03:39.057558 #8388]  INFO -- : 0:  rack (1.5.2) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/rack-1.5.2.gemspec
+I, [2014-02-03T14:03:39.058593 #8388]  INFO -- : 0:  omniauth (1.1.4) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/omniauth-1.1.4.gemspec
+I, [2014-02-03T14:03:39.059697 #8388]  INFO -- : 0:  rest-client (1.6.7) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/rest-client-1.6.7.gemspec
+I, [2014-02-03T14:03:39.117473 #8388]  INFO -- : 0:  omniauth-draugiem (1.0.0) from /home/uldis/makit/omniauth-draugiem/omniauth-draugiem.gemspec
+I, [2014-02-03T14:03:39.118854 #8388]  INFO -- : 0:  rack-test (0.6.2) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/rack-test-0.6.2.gemspec
+I, [2014-02-03T14:03:39.119999 #8388]  INFO -- : 0:  rspec-core (2.14.7) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/rspec-core-2.14.7.gemspec
+I, [2014-02-03T14:03:39.121056 #8388]  INFO -- : 0:  rspec-expectations (2.14.4) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/rspec-expectations-2.14.4.gemspec
+I, [2014-02-03T14:03:39.122249 #8388]  INFO -- : 0:  rspec-mocks (2.14.4) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/rspec-mocks-2.14.4.gemspec
+I, [2014-02-03T14:03:39.123333 #8388]  INFO -- : 0:  rspec (2.14.1) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/rspec-2.14.1.gemspec
+I, [2014-02-03T14:03:39.124384 #8388]  INFO -- : 0:  simplecov-html (0.8.0) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/simplecov-html-0.8.0.gemspec
+I, [2014-02-03T14:03:39.125454 #8388]  INFO -- : 0:  simplecov (0.8.2) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/simplecov-0.8.2.gemspec
+I, [2014-02-03T14:03:39.126526 #8388]  INFO -- : 0:  webmock (1.16.1) from /home/uldis/.rvm/gems/ruby-2.0.0-p195/specifications/webmock-1.16.1.gemspec
