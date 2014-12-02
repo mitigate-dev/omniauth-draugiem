@@ -1,5 +1,8 @@
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter '/vendor/bundle/'
+end
+
 require 'rspec'
 require 'rack/test'
 require 'webmock/rspec'
