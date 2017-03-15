@@ -35,12 +35,12 @@ module OmniAuth
           :hash => Digest::MD5.hexdigest("#{options.api_key}#{callback_url}")
         }
         query_string = params.collect{ |key,value| "#{key}=#{Rack::Utils.escape(value)}" }.join('&')
-        redirect "http://api.draugiem.lv/authorize/?#{query_string}"
+        redirect "https://api.draugiem.lv/authorize/?#{query_string}"
       end
 
       def callback_phase
         if request.params['dr_auth_status'] == 'ok' && request.params['dr_auth_code']
-          response = RestClient.get('http://api.draugiem.lv/json/', { :params => draugiem_authorize_params(request.params['dr_auth_code']) })
+          response = RestClient.get('https://api.draugiem.lv/json/', { :params => draugiem_authorize_params(request.params['dr_auth_code']) })
           auth = MultiJson.decode(response.to_s)
           unless auth['error']
             @auth_data = auth
