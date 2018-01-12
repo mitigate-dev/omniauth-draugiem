@@ -41,7 +41,7 @@ describe 'OmniAuth::Strategies::Draugiem', :type => :strategy do
           }
         }))
         get '/auth/draugiem/callback?dr_auth_status=ok&dr_auth_code=123456'
-
+        
         expect(last_request.env['omniauth.auth']['credentials']['apikey']).to eq "123456789"
         expect(last_request.env['omniauth.auth']['info']['location']).to eq "Durbe"
         expect(last_request.env['omniauth.auth']['info']['age']).to be nil
