@@ -46,5 +46,30 @@ describe 'OmniAuth::Strategies::Draugiem', :type => :strategy do
         expect(last_request.env['omniauth.auth']['info']['age']).to be nil
         expect(last_request.env['omniauth.auth']['info']['adult']).to be true
     end
+
+    it 'should gather user data after success authorization when age is 8 and not adult' do
+      stub_request(:get, "https://api.draugiem.lv/json/?action=authorize&app=abc&code=123456").
+        to_return(:body => MultiJson.encode({
+          'apikey'=>"123456789",
+          'uid'=>"100",
+          'language'=>"lv",
+          'users'=>{
+            '100'=>{
+              'uid'=>"100",
+              'name'=>"John",
+              'surname'=>"Lenon",
+              'nick'=>"johnybravo",
+              'place'=>"Durbe",
+              'age'=>8,
+              'adult'=> 0,
+              'img'=>"https://4.bp.blogspot.com/_ZmXOoYjxXog/Sg2jby1RFSI/AAAAAAAAE_Q/1LpfjimAz50/s400/JohnnyBravo3.gif",
+              'sex'=>"M"
+            }
+          }
+        }))
+        get '/auth/draugiem/callback?dr_auth_status=ok&dr_auth_code=123456'
+        expect(last_request.env['omniauth.auth']['info']['age']).to be 8
+        expect(last_request.env['omniauth.auth']['info']['adult']).to be false
+    end
   end
 end
