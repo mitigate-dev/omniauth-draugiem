@@ -1,5 +1,5 @@
 require File.expand_path('../../../spec_helper', __FILE__)
-require 'pry'
+
 describe 'OmniAuth::Strategies::Draugiem', :type => :strategy do
 
   include OmniAuth::Test::StrategyTestCase
