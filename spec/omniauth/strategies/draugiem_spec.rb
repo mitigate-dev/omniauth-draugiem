@@ -24,11 +24,11 @@ describe 'OmniAuth::Strategies::Draugiem', :type => :strategy do
       stub_request(:get, "https://api.draugiem.lv/json/?action=authorize&app=abc&code=123456").
         to_return(:body => MultiJson.encode({
           'apikey'=>"123456789",
-          'uid'=>"100",
+          'uid'=>100,
           'language'=>"lv",
           'users'=>{
             '100'=>{
-              'uid'=>"100",
+              'uid'=>100,
               'name'=>"John",
               'surname'=>"Lenon",
               'nick'=>"johnybravo",
@@ -51,11 +51,11 @@ describe 'OmniAuth::Strategies::Draugiem', :type => :strategy do
       stub_request(:get, "https://api.draugiem.lv/json/?action=authorize&app=abc&code=123456").
         to_return(:body => MultiJson.encode({
           'apikey'=>"123456789",
-          'uid'=>"100",
+          'uid'=>100,
           'language'=>"lv",
           'users'=>{
             '100'=>{
-              'uid'=>"100",
+              'uid'=>100,
               'name'=>"John",
               'surname'=>"Lenon",
               'nick'=>"johnybravo",
