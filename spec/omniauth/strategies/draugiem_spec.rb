@@ -1,5 +1,5 @@
 require File.expand_path('../../../spec_helper', __FILE__)
-
+require 'pry'
 describe 'OmniAuth::Strategies::Draugiem', :type => :strategy do
 
   include OmniAuth::Test::StrategyTestCase
@@ -33,8 +33,8 @@ describe 'OmniAuth::Strategies::Draugiem', :type => :strategy do
               'surname'=>"Lenon",
               'nick'=>"johnybravo",
               'place'=>"Durbe",
-              'age'=>"false",
-              'adult'=>"1",
+              'age'=>false,
+              'adult'=> 1,
               'img'=>"https://4.bp.blogspot.com/_ZmXOoYjxXog/Sg2jby1RFSI/AAAAAAAAE_Q/1LpfjimAz50/s400/JohnnyBravo3.gif",
               'sex'=>"M"
             }

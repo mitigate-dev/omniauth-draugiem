@@ -71,8 +71,8 @@ module OmniAuth
             'first_name' => user['name'],
             'last_name' => user['surname'],
             'location' => user['place'],
-            'age' => user['age'] =~ /^0-9$/ ? user['age'] : nil,
-            'adult' => (user['adult'] == '1'),
+            'age' => user['age'] ? user['age'] : nil,
+            'adult' => (user['adult'] == 1),
             'image' => user['img'],
             'sex' => user['sex']
           }
