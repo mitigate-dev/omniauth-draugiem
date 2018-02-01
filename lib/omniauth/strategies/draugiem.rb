@@ -55,23 +55,24 @@ module OmniAuth
         fail!(:invalid_response, e)
       end
 
-      uid { @auth_data['uid'] }
+      uid { @auth_data['uid'].to_s }
 
       credentials do
         { 'apikey' => @auth_data['apikey'] }
       end
 
       info do
-        if @auth_data['users'] && @auth_data['users'][@auth_data['uid']]
-          user = @auth_data['users'][@auth_data['uid']]
+        if @auth_data['users'] && @auth_data['users'][@auth_data['uid'].to_s]
+          user = @auth_data['users'][@auth_data['uid'].to_s]
           {
             'name' => "#{user['name']} #{user['surname']}",
             'nickname' => user['nick'],
+            'email' => user['email'],
             'first_name' => user['name'],
             'last_name' => user['surname'],
             'location' => user['place'],
-            'age' => user['age'] =~ /^0-9$/ ? user['age'] : nil,
-            'adult' => user['adult'] == '1' ? true : false,
+            'age' => user['age'] ? user['age'] : nil,
+            'adult' => (user['adult'] == 1),
             'image' => user['img'],
             'sex' => user['sex']
           }

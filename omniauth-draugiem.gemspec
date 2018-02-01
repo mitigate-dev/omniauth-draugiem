@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency "omniauth", "~> 1.0"
-  s.add_runtime_dependency "rest-client", "~> 1.8"
+  s.add_runtime_dependency "rest-client", "~> 2.0.1"
   s.add_runtime_dependency "multi_json", "~> 1.0"
 
   s.add_development_dependency "bundler", "~> 1.5"
